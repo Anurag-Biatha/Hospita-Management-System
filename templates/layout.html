@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/IconSocial.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <script src="{{url_for('static',filename='js/jquery.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='vendor/bootstrap-icons/bootstrap-icons.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='vendor/boxicons/css/boxicons.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='vendor/glightbox/css/glightbox.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='vendor/swiper/swiper-bundle.min.css')}}">
+    <title>Our Health</title>
+</head>
+
+<body>
+    <div class="container mt-4">
+        {% with messages=get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {%  for category, message in messages %}
+        <div class="alert alert-{{category}} alert-dismissible fade show"role="alert">
+           {{message}}
+            <button type="button"class="close"data-dismiss="alert"aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <div class="row ">
+            <div class="col-2">
+                <div class="banner ">
+                    <a href="{{url_for('hospital')}}"> <img src="{{url_for('static',filename='images/log.png')}}"
+                            style="height:40px;opacity: 0.7;" class="log" id="log">
+                    </a>
+                </div>
+            </div>
+            <div class="col-1 ms-0 ps-0  mt-2 me-0 pe-0 ">
+                <h3 class="text-start fs-3 fw-bold font-monospace  text-anim" data-text="OUR-H" id="text-anim">OUR-H
+                </h3>
+            </div>
+            <div class="col-5">
+                <ul>
+                   
+                    <li><a href="">Cardiology</a></li>
+                    <li><a href="">Darmatalogy</a></li>
+                    <li><a href="">Blood</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <ul>
+                    <li><a href="" data-toggle="modal" data-target="#myModal">Sing Up</a>
+                        <div class="modal fade " id="myModal" data-backdrop="static">
+                            <div class="modal-dialog  bg-transparent ">
+                                <div class="modal-content">
+                                    <div class="modal-header ">
+                                        <h2 class="modal-title text-center text-muted ">SING UP</h2>
+                                        <button class="close" data-dismiss="modal"><span> &times;</span></button>
+                                    </div>
+                                    <div class="modal-body bg-transparent w">
+                                        <form action="{{url_for('singup')}}" method="POST">
+                                            <table class="table ">
+                                                <tr>
+                                                    <th>
+                                                        <div class="form-floating">
+                                                            <input type="text" name="firstname" class="form-control"
+                                                                id="floatingInput" required>
+                                                            <label for="floatingInput">First Name</label>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="form-floating">
+                                                            <input type="text" name="lastname" class="form-control"
+                                                                id="floatingInput" required>
+                                                            <label for="floatingInput">last Name</label>
+                                                        </div>
+                                                    </th>
+
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <div class="form-floating ">
+                                                            <input type="date" name="dob" class="form-control"
+                                                                id="floatingInput" required>
+                                                            <label for="floatingInput">Date of Birth</label>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="form-floating ">
+                                                            <input type="email" name="emailid" class="form-control"
+                                                                id="floatingInput" required>
+                                                            <label for="floatingInput">Email Id</label>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+
+                                                        <div class=" form-group ">
+                                                            <select name="sex" id=""
+                                                                class="form-select p-3  text-muted fw-bold "
+                                                                style="font-size:13px ;">
+                                                                <option value="">Gender</option>
+                                                                <option value="Male">Male</option>
+                                                                <option value="Female">Female</option>
+                                                                <option value="Other">Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class=" form-group ">
+                                                            <select name="department" id=""
+                                                                class="form-select p-3  text-muted fw-bold "
+                                                                style="font-size:13px ;">
+                                                                <option value="">Choose Specialist</option>
+                                                                <option value="Cardiology">Cardiology</option>
+                                                                <option value="Darmatalogy">Darmatalogy</option>
+                                                                <option value="Pathalogy">Pathalogy</option>
+                                                                <option value="admin">Admin</option>
+                                                            </select>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th class=" w-50">
+                                                        <div class="input-group  mt-2">
+                                                            <div class="custom-file   ">
+                                                                <input type="file" name="photo" id=""
+                                                                    class="custom-file-input">
+                                                                <lable class="custom-file-label"></lable>
+                                                            </div>
+                                                            <div class="input-group-append">
+                                                                <span class="input-group-text">
+                                                                    Photo
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="form-floating  ">
+                                                            <input type="number" name="phone" class="form-control"
+                                                                id="floatingInput" required>
+                                                            <label for="floatingInput">Phone Number</label>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <div class="form-floating  ">
+                                                            <input type="number" name="workExp" class="form-control"
+                                                                id="floatingInput" required>
+                                                            <label for="floatingInput">Work experience year</label>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="form-floating  ">
+                                                            <input type="text" name="quali" class="form-control"
+                                                                id="floatingInput" required>
+                                                            <label for="floatingInput">Qualification</label>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <div class="form-floating  ">
+                                                            <input type="text" name="addper" class="form-control"
+                                                                id="floatingInput" required>
+                                                            <label for="floatingInput">Address permamnet</label>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="form-floating  ">
+                                                            <input type="text" name="addtemp" class="form-control"
+                                                                id="floatingInput" required>
+                                                            <label for="floatingInput">Address tempeorary</label>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <div class="form-floating  ">
+                                                            <input type="text" name="fathername" class="form-control"
+                                                                id="floatingInput" required>
+                                                            <label for="floatingInput">Fathers' Name</label>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="form-floating  ">
+                                                            <input type="text" name="mothername" class="form-control"
+                                                                id="floatingInput" required>
+                                                            <label for="floatingInput">Mothers' Name</label>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <div class="form-floating  ">
+                                                            <input type="number" name="pphone" class="form-control"
+                                                                id="floatingInput" required>
+                                                            <label for="floatingInput">Parents Contact</label>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="form-floating  ">
+                                                            <input type="email" name="pemailid" class="form-control"
+                                                                id="floatingInput" required>
+                                                            <label for="floatingInput">Parents Email ID</label>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>
+                                                        <input type="submit" class="makeappointment" value="close">
+                                                    </th>
+                                                    <th>
+                                                        <input type="submit" class="makeappointment"
+                                                            value="Make Submit">
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="" class="login" data-toggle="modal" data-target="#myModalLogin"
+                            style="box-shadow: rgba(155, 153, 153, 0.35) 0px 5px 15px;color: white;background-color:rgba(255, 179, 15, 0.856);border: 1px solid rgba(255, 255, 255, 0.856);">Login</a>
+                        <div class="modal fade" id="myModalLogin" data-backdrop="static">
+                            <div class="modal-dialog modal-dialog-centered bg-transparent">
+                                <div class="modal-content ">
+                                    <div class="modal-header text-center ">
+                                        <h2 class="modal-title  text-muted ms-4">Login</h2>
+                                        <button class="close" data-dismiss="modal"><span> &times;</span></button>
+                                    </div>
+                                    <div class="modal-body bg-transparent">
+                                        <form action="" method="POST" class="form-inline">
+                                            <div class="form ms-3">
+                                                <pre class="ms-3">Lorem ipsum dolor sit amet consectetur  </pre>
+                                                <table class="table">
+                                                    <tr>
+                                                        <th>
+                                                            <div class="form-floating">
+                                                                <input type="email" name="emailid" class="form-control"
+                                                                    style="width:410px;" id="floatingInput" required>
+                                                                <label for="floatingInput">Email </label>
+                                                            </div>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <div class="form-floating">
+                                                                <input type="password" name="password"
+                                                                    class="form-control" id="floatingInput"
+                                                                    style="width:410px;" required>
+                                                                <label for="floatingInput">Password</label>
+                                                            </div>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <div class=" form-group ">
+                                                                <select name="department" id=""
+                                                                    class="form-select p-3  text-muted fw-bold "
+                                                                    style="font-size:13px ;">
+                                                                    <option value="">Choose Specialist</option>
+                                                                    <option value="Cardiology">Cardiology</option>
+                                                                    <option value="Darmatalogy">Darmatalogy</option>
+                                                                    <option value="Pathalogy">Pathalogy</option>
+                                                                    <option value="admin">Admin</option>
+                                                                </select>
+                                                            </div>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <input type="submit" class="makeappointment"
+                                                                value="Reset Password" data-dismiss="modal"> <input
+                                                                type="submit" class="makeappointment" value="Login"
+                                                                data-dismiss="modal">
+                                                        </th>
+                                                    </tr>
+
+                                                </table>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="3" class="active"></li>
+                    </ol>
+                    <div class="carousel-inner">
+
+                        {% block body %}
+
+                        {% endblock body %}
+                    </div>
+                    <a href="#myCarousel" class="carousel-control-prev ps-0 ms-0 mt-0" data-slide="prev"><span
+                            class="carousel-control-prev-icon ps-0 ms-0 mt-0"></span></a>
+                    <a href="#myCarousel" class="carousel-control-next me-0 pe-0" data-slide="next"><span
+                            class="carousel-control-next-icon me-0 pe-0"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div id="footer" class="text-center bg-transparent">
+                <div class="socials-media text-center">
+
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                        <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+                        <li><a href="#"><i class="bi bi-github"></i></a></li>
+                    </ul>
+                </div>
+
+                <p class="text-center">&copy; Copyrights Health care pvt ltd. All rights reserved.</p>
+
+
+                <div class="credits pb-1 mb-1">
+                    Designed by <a href="https://chaudharybasant.com/" class="text-decoration-none">C h a w b a s a
+                        n
+                        t a</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="row mt-2 mb-3 pb-2" id="ba" style="background-color:rgba(255, 255, 255, 0.452);border: 1px solid white;">
+    <div class="col-7 ">
+        <p class="text-justify  ms-3 mt-0 mb-0 pt-0 pb-0 text-anim" id="text-anim"
+            data-text="WE PROVIDE BEST HEALTHCARE !">WE PROVIDE BEST HEALTHCARE</p>
+        <h1 class=" ms-4 mt-3 mb-4 text-white">Make An Appointment For Your Family :)
+        </h1>
+        <div class="card shadow bg-transparent pb-4 pt-1  wts ps-2 rounded-3 border-white ">
+            <p class="text-white fs-6 mb-0 pb-0 m-3  ">Lorem ipsum dolor, sit amet
+                consectetur
+                adipisicing elit. Deserunt
+                repudiandae magnam voluptates,
+                aliquam quod nobis rem fugit possimus tenetur ratione ad eum, a ipsam?
+                Ad autem commodi odio
+                explicabo aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing
+                elit. Nostrum,
+                architecto.
+            </p>
+            <button>ReadME -></button>
+
+        </div>
+    </div>
+    <div class="col-5 mt-5 mb-2 ">
+        <form action="" method="POST">
+            <table class="table">
+                <h3 class="text-center text-white" style="text-shadow: 1px 1px 15px #f4f2f7e0;
+                                            ">Make a Appointment</h3>
+                <tr>
+                    <th>
+                        <div class="form-floating">
+                            <input type="text" name="fullyname" class="form-control" id="floatingInput" required>
+                            <label for="floatingInput">Full Name</label>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="form-floating">
+                            <input type="email" name="emailid" class="form-control" id="floatingInput" required>
+                            <label for="floatingInput">Email</label>
+                        </div>
+                    </th>
+
+                </tr>
+                <tr>
+
+                    <th>
+                        <div class="form-floating">
+                            <input type="number" name="phone" class="form-control" id="floatingInput" required>
+                            <label for="floatingInput">Phone</label>
+                        </div>
+                    </th>
+                    <th>
+                        <div class=" form-group ">
+                            <select name="sex" id="" class="form-select p-3 text-muted fw-normal fs-6">
+                                <option value="">General Health</option>
+                                <option value="">Doctor</option>
+                                <option value="">Doctor</option>
+                                <option value="">Doctor</option>
+                            </select>
+                        </div>
+                    </th>
+
+                </tr>
+                <tr>
+                    <th>
+                        <div class="form-floating">
+                            <input type="time" name="time" class="form-control" id="floatingInput" required>
+                            <label for="floatingInput">Time</label>
+                        </div>
+                    </th>
+
+
+                    </th>
+                    <th>
+
+                        <div class=" form-group ">
+                            <select name="department" id="" class="form-select p-3  text-muted">
+                                <option value="">Department</option>
+                                <option value="">Doctor</option>
+                                <option value="">Doctor</option>
+                                <option value="">Doctor</option>
+                            </select>
+                        </div>
+                    </th>
+
+                </tr>
+                <tr>
+                    <th>
+                        <div class="form-floating">
+                            <input type="date" name="date" class="form-control" id="floatingInput" required>
+                            <label for="floatingInput">Date</label>
+                        </div>
+                    </th>
+
+                    <th>
+                        <input type="submit" class="makeappointment" value="Make Appointment->">
+                    </th>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+
+</div>
+
+{% endblock body %}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/heart.css">
+    <link rel="stylesheet" href="/static/css/heartstyle.css">
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
+
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/heartstyle.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/heart.css')}}">
+    <script defer src="{{url_for('static',filename='js/bootstrap.js')}}"></script>
+    <link href="{{url_for('static',filename='vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+    <title>Heart</title>
+</head>
+
+<body>
+    <div class="container con mt-4">
+        <div class="row pt-0 mt-0 pb-0 mb-0">
+            <div class="col-6 mt-0 pt-0 mb-0 pb-0">
+                <table class="table">
+                    <tr class="text-muted">
+                        <th>Source</th>
+                        <th>Algorithm</th>
+                        <th>Accuracy</th>
+                        <th>Trained</th>
+                        <th>TestScore</th>
+                    </tr>
+                    <tr>
+                        <td>Kaggle</td>
+                        <td>DTClassifier</td>
+                        <td>99.0123</td>
+                        <td>55000</td>
+                        <th>0.9</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-6">
+                <pre class="pt-2 mt-2"> <\> Lorem ipsum, dolor sit amet consectetur adipisicing elit. </pre>
+            </div>
+        </div>
+
+        <div class="row pt-1 mt-1 pb-1 mb-1">
+            <div class="col-4 text-start">
+                <h1 class="caps" id="caps" data-text=" eart Diseases">Heart Diseases</h1>
+                <h2>Machine Learning</h2>
+            </div>
+            <div class="col-4 text-center">
+                <img src="{{url_for('static',filename='/images/heart.jpg')}}" style="height:115px;" class="heart"
+                    id='heart'>
+            </div>
+            <div class="col-4 ">
+                <div class="profiles offset-6 line" id="line">
+                    <div class="pros d-inline  ">
+                        <img src="{{url_for('static',filename='/images/Basanta.jpeg')}}"
+                            style="height:50px; border-radius:50%;padding:0.5%;border: 1px solid rgba(0, 0, 255, 0.514); "
+                            class="rt pic" id="pic">
+                        <pre class="d-inline mt-auto text-center fw-bolder  rt" id="rt"
+                            data-text="</>basanta Chaw  ">Basanta Chaw    </pre>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form action="" method="POST" class="m-0 p-1">
+            <div class="row mt-1 mb-4 pt-1 pb-1">
+
+                <div class="col-6 cons pb-3  " style="border-top-right-radius:0%; border-bottom-right-radius: 0%;">
+                    <table class="table d-table-row ">
+                        <tr class="text-muted text-center">
+                            <th>
+                                <div class="form-floating">
+                                    <input type="text" name="age" class="form-control" id="floatingInput" required>
+                                    <label for="floatingInput">Age</label>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="form-floating">
+                                    <input type="text" name="thall" class="form-control" id="floatingInput" required>
+                                    <label for="floatingInput">Thal</label>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="form-floating">
+                                    <input type="text" name="cp" class="form-control" id="floatingInput" required>
+                                    <label for="floatingInput">Cp</label>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="form-floating">
+                                    <input type="text" name="Trestbps" class="form-control" id="floatingInput" required>
+                                    <label for="floatingInput">Trestbps</label>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr class="text-muted">
+                            <th>
+                                <div class="form-floating">
+                                    <input type="text" name="Chol" class="form-control" id="floatingInput" required>
+                                    <label for="floatingInput">Chol</label>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="form-floating">
+                                    <input type="text" name="Fbs" class="form-control" id="floatingInput" required>
+                                    <label for="floatingInput">Fbs</label>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="form-floating">
+                                    <input type="text" name="Restcg" class="form-control" id="floatingInput" required>
+                                    <label for="floatingInput">Restecg</label>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="form-floating">
+                                    <input type="text" name="Thalach" class="form-control" id="floatingInput" required>
+                                    <label for="floatingInput">Thalach</label>
+                                </div>
+                            </th>
+                        </tr>
+
+                        <tr class="text-muted">
+                            <th>
+                                <div class="form-floating">
+                                    <input type="text" name="Exang" class="form-control" id="floatingInput" required>
+                                    <label for="floatingInput">Exang</label>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="form-floating m-0 p-0">
+                                    <input type="text" name="Oldpeak" class="form-control w-100" id="floatingInput"
+                                        required>
+                                    <label for="floatingInput">Oldpeak</label>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="form-floating">
+                                    <input type="text" name="Slope" class="form-control" id="floatingInput" required>
+                                    <label for="floatingInput">Slope</label>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="form-floating">
+                                    <input type="text" name="Ca" class="form-control" id="floatingInput" required>
+                                    <label for="floatingInput">Ca</label>
+                                </div>
+                            </th>
+
+                        </tr>
+                    </table>
+
+                    <input type="submit" value="Predict" class="bt ms-2 mt-4">
+                    <div class="form-check d-inline-block ms-4">
+                        <input type="radio" class="form-check-input" name="sex" id="male" value=1>
+                        <label for="male" class="form-check-label text-muted fw-bolder">Male</label>
+                    </div>
+                    <div class="form-check d-inline-block ms-2">
+                        <input type="radio" class="form-check-input" id="female" name="sex" value=0>
+                        <label for="female" class="form-check-label text-muted fw-bolder">Female</label>
+                    </div>
+                    <div class="d-inline-block ms-4">
+                        {% with message=get_flashed_messages(with_categories=true) %}
+                        {% if message %}
+                        {% for category,message in message %}
+                        <p class="text-{{category}} font-monospace fs-4 ">
+                            {{message}}
+                        </p>
+                        {% endfor %}
+                        {% else %}
+                        <p class="fw-bolder text-success">R E S U L T</p>
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+
+                </div>
+        </form>
+
+        <div class="col-6 cons" style=" border-top-left-radius:0%;border-bottom-left-radius:0%;">
+            <table class="table table-hover">
+                <tr class="text-muted table-active">
+                    <th>Country</th>
+                    <th>Year</th>
+                    <th>cases</th>
+                    <th>Saved</th>
+                    <th>Died</th>
+                </tr>
+                <tr>
+                    <td>Nepal</td>
+                    <td>2079</td>
+                    <td>11291</td>
+                    <td>90221</td>
+                    <td>1503</td>
+                </tr>
+            </table>
+            <table class="table">
+                <tr class="text-center text-muted">
+                    <th>PIE CHART</th>
+                    <th>HISTOGRAM</th>
+                </tr>
+                <tr class="text-center">
+                    <td>
+                        <img src="{{url_for('static',filename='/graphs/pie.png')}}" alt="" srcset=""
+                            style="height:160px;">
+                    </td>
+                    <td>
+                        <img src="{{url_for('static',filename='/graphs/his.png')}}" alt="" srcset=""
+                            style="height: 115px;" class="mt-3 ms-0 me-0 pe-0 ps-0">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="row mt-0 pt-0 mb-1 pb-1">
+            <div id="footer" class="text-center mb-0 pb-0 d-inline">
+                <div class="socials-media text-center mb-0 pb-0">
+
+                    <ul class="list-unstyled mb-0 pb-0 mt-1 pt-0">
+                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                        <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                    </ul>
+                </div>
+
+                <p>&copy; Copyrights Heart Diseases Detecting App All rights reserved.</p>
+
+                <div class="credits pb-1 mb-1">
+                    Designed by <a href="https://bootstrapmade.com/">Chawbasanta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

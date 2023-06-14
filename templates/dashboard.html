@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="3" class="active"></li>
+            </ol>
+            <div class="carousel-inner">
+
+
+                <div class="carousel-item active">
+                    <div class="row mb-3 pb-2" id="ba"
+                        style="background-color:rgba(255, 255, 255, 0.253);border: 1px solid white;">
+                        <div class="col-7 ">
+                            <p class="text-justify  ms-2 mt-0 mb-0 pt-0 pb-2 text-anim" id="text-anim" data-text="Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Velit, accusantium?"></p>
+                            <h1 class=" ms-4 mt-3 mb-4 text-white"> Best Medical
+                                Care For Yourself and Your Family : )
+                            </h1>
+                            <div class="card shadow bg-transparent pb-4 pt-1  wts ps-2 rounded-3 border-white  mt-3">
+                                <p class="text-white fs-6 mb-0 pb-0 m-3  ">Lorem ipsum dolor, sit amet
+                                    consectetur
+                                    adipisicing elit. Deserunt
+                                    repudiandae magnam voluptates,
+                                    aliquam quod nobis rem fugit possimus tenetur ratione ad eum, a ipsam?
+                                    Ad autem commodi odio
+                                    explicabo aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    elit. Nostrum,
+                                    architecto.
+                                </p>
+                                <button>ReadME -></button>
+                            </div>
+                        </div>
+                        <div class="col-5 mt-5  ">
+                            <video src="{{url_for('static',filename='images/tablet.mp4')}}"
+                                style="height:350px;border:1px solid white;border-radius:5px;opacity: 0.9;"
+                                class="shadow p-2 mt-5" autoplay loop muted></video>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row mb-3 pb-2" id="ba"
+                        style="background-color:rgba(255, 255, 255, 0.253);border: 1px solid white;">
+                        <div class="col-7 ">
+                            <p class="text-justify  ms-2 mt-0 mb-0 pt-0 pb-2 text-anim" id="text-anim" data-text="Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Velit, accusantium?"></p>
+                            <h1 class=" ms-4 mt-3 mb-4 text-white"> Best Medical
+                                Care For Yourself and Your Family : )
+                            </h1>
+                            <div class="card shadow bg-transparent pb-4 pt-1  wts ps-2 rounded-3 border-white  mt-3">
+                                <p class="text-white fs-6 mb-0 pb-0 m-3  ">Lorem ipsum dolor, sit amet
+                                    consectetur
+                                    adipisicing elit. Deserunt
+                                    repudiandae magnam voluptates,
+                                    aliquam quod nobis rem fugit possimus tenetur ratione ad eum, a ipsam?
+                                    Ad autem commodi odio
+                                    explicabo aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    elit. Nostrum,
+                                    architecto.
+                                </p>
+                                <button>ReadME -></button>
+                            </div>
+                        </div>
+                        <div class="col-5 mt-5  ">
+                            <video src="{{url_for('static',filename='images/tablet.mp4')}}"
+                                style="height:350px;border:1px solid white;border-radius:5px;opacity: 0.9;"
+                                class="shadow p-2 mt-5" autoplay loop muted></video>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <a href="#myCarousel" class="carousel-control-prev ps-0 ms-0 mt-0" data-slide="prev"><span
+                    class="carousel-control-prev-icon ps-0 ms-0 mt-0"></span></a>
+            <a href="#myCarousel" class="carousel-control-next me-0 pe-0" data-slide="next"><span
+                    class="carousel-control-next-icon me-0 pe-0"></span></a>
+        </div>
+    </div>
+</body>
+
+</html>
